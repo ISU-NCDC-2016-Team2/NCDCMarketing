@@ -18,17 +18,17 @@ pump4=paths['pump4']
 pump5=paths['pump5']
 wtc=paths['wtc']
 
-xda_relay1 = XDAClient(OPCServerAddress=relay1,ReturnErrorText=True)
-xda_relay2 = XDAClient(OPCServerAddress=relay2,ReturnErrorText=True)
-xda_gen1 = XDAClient(OPCServerAddress=gen1,ReturnErrorText=True)
-xda_gen2 = XDAClient(OPCServerAddress=gen2,ReturnErrorText=True)
-xda_pump0 = XDAClient(OPCServerAddress=pump0,ReturnErrorText=True)
-xda_pump1 = XDAClient(OPCServerAddress=pump1,ReturnErrorText=True)
-xda_pump2 = XDAClient(OPCServerAddress=pump2,ReturnErrorText=True)
-xda_pump3 = XDAClient(OPCServerAddress=pump3,ReturnErrorText=True)
-xda_pump4 = XDAClient(OPCServerAddress=pump4,ReturnErrorText=True)
-xda_pump5 = XDAClient(OPCServerAddress=pump5,ReturnErrorText=True)
-xda_wtc = XDAClient(OPCServerAddress=wtc,ReturnErrorText=True)
+xda_relay1 = XDAClient(OPCServerAddress=relay1,ReturnErrorText=False)
+xda_relay2 = XDAClient(OPCServerAddress=relay2,ReturnErrorText=False)
+xda_gen1 = XDAClient(OPCServerAddress=gen1,ReturnErrorText=False)
+xda_gen2 = XDAClient(OPCServerAddress=gen2,ReturnErrorText=False)
+xda_pump0 = XDAClient(OPCServerAddress=pump0,ReturnErrorText=False)
+xda_pump1 = XDAClient(OPCServerAddress=pump1,ReturnErrorText=False)
+xda_pump2 = XDAClient(OPCServerAddress=pump2,ReturnErrorText=False)
+xda_pump3 = XDAClient(OPCServerAddress=pump3,ReturnErrorText=False)
+xda_pump4 = XDAClient(OPCServerAddress=pump4,ReturnErrorText=False)
+xda_pump5 = XDAClient(OPCServerAddress=pump5,ReturnErrorText=False)
+xda_wtc = XDAClient(OPCServerAddress=wtc,ReturnErrorText=False)
 
 print xda_relay1.Read([ItemContainer(ItemName='relay1_breaker')])[0][0].Value
 print xda_relay1.Read([ItemContainer(ItemName='relay1_load')])[0][0].Value
